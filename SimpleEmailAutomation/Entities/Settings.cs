@@ -10,6 +10,7 @@ namespace SimpleEmailAutomation.Entities
     {
         public static string Username { get; set; }
         public static string Password { get; set; }
+        public static string Host { get; set; }
         public static int Port { get; set; }
     }
 }

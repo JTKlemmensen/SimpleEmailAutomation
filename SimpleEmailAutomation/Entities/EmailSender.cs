@@ -29,7 +29,7 @@ namespace SimpleEmailAutomation.Entities
                         emailMessage.Subject = GetValue(row, template.GetKeyword("<Subject>"));
                         emailMessage.Body = template.Message(row);
                         emailMessage.Priority = MailPriority.Normal;
-                        using (SmtpClient MailClient = new SmtpClient("smtp.gmail.com", Settings.Port))
+                        using (SmtpClient MailClient = new SmtpClient(Settings.Host, Settings.Port))
                         {
                             MailClient.EnableSsl = true;
                             MailClient.Credentials = new System.Net.NetworkCredential(Settings.Username, Settings.Password);
