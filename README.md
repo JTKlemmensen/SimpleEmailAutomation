@@ -9,3 +9,4 @@ Program that can automatically send many emails with different messages to diffe
 * Timer support(frequency, amount)
 * Run in background
 * Make a prettier GUI
+* HTML support
