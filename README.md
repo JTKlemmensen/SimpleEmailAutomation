@@ -10,3 +10,4 @@ Program that can automatically send many emails with different messages to diffe
 * Run in background
 * Make a prettier GUI
 * HTML support
+* Make GUI more user friendly (keywords connect to message)
