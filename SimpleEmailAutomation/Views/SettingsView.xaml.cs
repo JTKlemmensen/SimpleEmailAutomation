@@ -27,6 +27,7 @@ namespace SimpleEmailAutomation.Views
             Port.Text = Settings.Port+"";
             Username.Text = Settings.Username;
             Password.Password = Settings.Password;
+            Host.Text = Settings.Host;
 
         }
 
@@ -36,6 +37,7 @@ namespace SimpleEmailAutomation.Views
             {
                 Settings.Port = port;
                 Settings.Username = Username.Text;
+                Settings.Host = Host.Text;
                 Settings.Password = Password.Password;
                 MessageBox.Show("Settings have been saved",
                                 "Confirmation",
