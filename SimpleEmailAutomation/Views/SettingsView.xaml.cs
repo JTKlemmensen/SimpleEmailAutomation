@@ -24,6 +24,10 @@ namespace SimpleEmailAutomation.Views
         public SettingsView()
         {
             InitializeComponent();
+            Port.Text = Settings.Port+"";
+            Username.Text = Settings.Username;
+            Password.Password = Settings.Password;
+
         }
 
         private void OnSave(object sender, RoutedEventArgs e)
