@@ -1,6 +1,9 @@
-﻿using System;
+﻿using SimpleEmailAutomation.Entities;
+using SimpleEmailAutomation.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -23,6 +26,23 @@ namespace SimpleEmailAutomation
         public MainWindow()
         {
             InitializeComponent();
+            SetView(new SettingsView());
+        }
+
+        private void GoToSendMails(object sender, RoutedEventArgs e)
+        {
+            SetView(new MailSenderView());
+        }
+
+        private void GoToSettings(object sender, RoutedEventArgs e)
+        {
+            SetView(new SettingsView());
+        }
+
+        public void SetView(UIElement element)
+        {
+            View.Children.Clear();
+            View.Children.Add(element);
         }
     }
 }
